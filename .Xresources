@@ -55,6 +55,16 @@
 *color7:                S_base2
 *color15:               S_base3
 
-!! urxvt
+! ------------------------------------------------------------------------------
+! URxvt Color theme
+! ------------------------------------------------------------------------------
 URxvt*scrollBar:  false
 
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: S_base03, S_base03, S_base00
+rofi.color-normal: S_base03, S_base0, S_base03, S_base00, S_base1
+rofi.color-active: S_base03, S_blue, S_base03, S_blue, S_base02
+rofi.color-urgent: S_base03, S_magenta, S_base03, S_magenta, S_base00
