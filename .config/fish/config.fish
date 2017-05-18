@@ -12,7 +12,3 @@ set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
 # status --is-interactive; and . (pyenv init -|psub)
 # status --is-interactive; and . (pyenv virtualenv-init -|psub)
 
-
-
-
-
