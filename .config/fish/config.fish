@@ -4,7 +4,7 @@
 
 # powerline-setup
 
-set -Ux EDITOR vim
+set -x EDITOR 'vim -f'
 
 set fish_user_paths $fish_user_paths $HOME/.local/bin
 set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
