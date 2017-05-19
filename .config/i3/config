@@ -54,7 +54,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st 
+bindsym $mod+Return exec st -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -179,6 +179,7 @@ bar {
         }
 }
 
+for_window [class="st"] border pixel 1
 
 exec --no-startup-id nextcloud
 exec --no-startup-id i3-msg 'workspace 1:Mail; exec /usr/bin/thunderbird'
