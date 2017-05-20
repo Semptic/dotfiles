@@ -15,5 +15,5 @@ set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
 if not set -q abbrs_initialized
     set -U abbrs_initialized
 
-    abbr -a audible 'bash AAXtoMP3 --flac 9bb94d07'
+    abbr -a audible 'bash AAXtoMP3 --single 9bb94d07'
 end
