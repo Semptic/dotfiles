@@ -184,3 +184,4 @@ for_window [class="st"] border pixel 1
 exec --no-startup-id nextcloud
 exec --no-startup-id i3-msg 'workspace 1:Mail; exec /usr/bin/thunderbird'
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec --no-startup-id udiskie --no-automount --no-notify --tray --use-udisks2
