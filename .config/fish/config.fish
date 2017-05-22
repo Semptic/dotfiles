@@ -40,4 +40,7 @@ if not set -q abbrs_initialized
     # docker
     abbr -a d       'docker'
     abbr -a dc      'docker-compose'
+    
+    # sudo
+    abbr -a s       'sudo'
 end
