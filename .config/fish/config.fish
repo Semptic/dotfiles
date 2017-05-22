@@ -27,6 +27,7 @@ if not set -q abbrs_initialized
     abbr -a gs      'git status'
     abbr -a gc      'git clone --recursive'
     abbr -a ga      'git add'
+    abbr -a gt      'git commit'
     abbr -a gch     'git checkout'
     abbr -a gcb     'git checkout -b'
     abbr -a grc     'git rm --cached'
