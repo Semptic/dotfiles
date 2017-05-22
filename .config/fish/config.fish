@@ -12,8 +12,8 @@ set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
 # status --is-interactive; and . (pyenv init -|psub)
 # status --is-interactive; and . (pyenv virtualenv-init -|psub)
 
-if not set -q abbrs_initialized
-    set -U abbrs_initialized
+if not set -q __abbrs_initi
+    set -U __abbrs_initi
 
     # Audible to mp3
     abbr -a audible 'bash AAXtoMP3 --single 9bb94d07'
@@ -24,24 +24,42 @@ if not set -q abbrs_initialized
 
     # Git
     abbr -a g       'git'
-    abbr -a gs      'git status'
-    abbr -a gc      'git clone --recursive'
+    abbr -a gs      'git status' # Conflicts with ghostscript
+    abbr -a gcl     'git clone --recursive'
     abbr -a ga      'git add'
-    abbr -a gt      'git commit'
-    abbr -a gch     'git checkout'
+    abbr -a gc      'git commit'
+    abbr -a gcm     'git commit -m'
+    abbr -a gco     'git checkout'
     abbr -a gcb     'git checkout -b'
     abbr -a grc     'git rm --cached'
     abbr -a gf      'git fetch --all'
     abbr -a gm      'git merge'
     abbr -a gp      'git push'
+    abbr -a gb      'git branch --verbose'
+    abbr -a gba     'git branch --verbose --all'
+    abbr -a gl      'git lol'
 
-    # Vim
-    abbr -a v       'vim'
+    # Dotfile manager (git bare)
+    abbr -a da      'dot add'
+    abbr -a dp      'dot push'
+    abbr -a dc      'dot commit -m'
+    abbr -a ds      'dot status'
 
     # docker
     abbr -a d       'docker'
     abbr -a dc      'docker-compose'
     
+    
+    # Arch
+    abbr -a pu      'pacaur -Syua'
+    abbr -a pi      'pacaur -s'
+
+    # Vim
+    abbr -a v       'vim'
+
     # sudo
     abbr -a s       'sudo'
+
+    # ranger
+    abbr -a r       'ranger'
 end
