@@ -32,7 +32,7 @@ if not set -q __abbrs_initi
     abbr -a gco     'git checkout'
     abbr -a gcb     'git checkout -b'
     abbr -a grc     'git rm --cached'
-    abbr -a gf      'git fetch --all'
+    abbr -a gf      'git fetch --prune --all'
     abbr -a gm      'git merge'
     abbr -a gp      'git push'
     abbr -a gb      'git branch --verbose'
@@ -42,7 +42,7 @@ if not set -q __abbrs_initi
     # Dotfile manager (git bare)
     abbr -a da      'dot add'
     abbr -a dp      'dot push'
-    abbr -a dc      'dot commit -m'
+    abbr -a dcm     'dot commit -m'
     abbr -a ds      'dot status'
 
     # docker
@@ -59,6 +59,7 @@ if not set -q __abbrs_initi
 
     # sudo
     abbr -a s       'sudo'
+    abbr -a se      'sudoedit'
 
     # ranger
     abbr -a r       'ranger'
