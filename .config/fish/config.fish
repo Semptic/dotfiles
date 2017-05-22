@@ -33,4 +33,11 @@ if not set -q abbrs_initialized
     abbr -a gf      'git fetch --all'
     abbr -a gm      'git merge'
     abbr -a gp      'git push'
+
+    # Vim
+    abbr -a v       'vim'
+
+    # docker
+    abbr -a d       'docker'
+    abbr -a dc      'docker-compose'
 end
