@@ -56,7 +56,10 @@ if not set -q __abbrs_initi
 
     # Vim
     abbr -a v       'vim'
+
+    # File edit
     abbr -a ei3     'vim ~/.config/i3/config'
+    abbr -a egit     'vim ~/.gitconfig'
     abbr -a efish   'vim ~/.config/fish/config.fish'
     abbr -a evim    'vim ~/.vim/vimrc.vim ~/.vim/plugins.vim ~/.vim/plugins_config.vim ~/.vimrc'
 
