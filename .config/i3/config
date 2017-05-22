@@ -181,12 +181,13 @@ bar {
 
 bindsym $mod+grave exec i3-input -F 'workspace "%s"' -P 'Switch to workspace: '
 bindsym $mod+Control+grave exec i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
-bindsym $mod+Shift+grave exec i3-input -F 'move container to "%s"' -P 'Move to workspace: '
+bindsym $mod+Shift+grave exec i3-input -F 'move container to workspace "%s"' -P 'Move to workspace: '
 
 for_window [class="st"] border pixel 1
 for_window [class="^factorio$"] border pixel 0
 
 exec --no-startup-id nextcloud
-exec --no-startup-id i3-msg 'workspace 1:Mail; exec /usr/bin/thunderbird'
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id udiskie --no-automount --no-notify --tray --use-udisks2
+
+exec --no-startup-id i3-msg 'workspace mail; exec /usr/bin/thunderbird'
