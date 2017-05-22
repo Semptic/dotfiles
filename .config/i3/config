@@ -179,6 +179,10 @@ bar {
         }
 }
 
+bindsym $mod+grave exec i3-input -F 'workspace "%s"' -P 'Switch to workspace: '
+bindsym $mod+Control+grave exec i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
+bindsym $mod+Shift+grave exec i3-input -F 'move container to "%s"' -P 'Move to workspace: '
+
 for_window [class="st"] border pixel 1
 for_window [class="^factorio$"] border pixel 0
 
