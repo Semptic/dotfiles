@@ -1,13 +1,17 @@
 function i3exit
+  function lock
+      xscreensaver-command -lock
+  end
+
   switch $argv
       case lock
-          i3lock
+          lock
       case logout
           i3-msg exit
       case suspend
-          i3lock; and systemctl hybrid-sleep
+          lock; and systemctl hybrid-sleep
       case hibernate
-          i3lock; and systemctl hibernate
+          lock; and systemctl hibernate
       case reboot
           systemctl reboot
       case shutdown
