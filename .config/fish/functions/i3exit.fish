@@ -1,6 +1,6 @@
 function i3exit
   function lock
-      xscreensaver-command -lock
+      xautolock -locknow
   end
 
   switch $argv
