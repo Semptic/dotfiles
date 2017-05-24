@@ -12,6 +12,7 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'tpope/vim-fugitive'
 " Plugin 'LnL7/vim-nix'
 
 
