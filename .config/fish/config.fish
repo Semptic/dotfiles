@@ -53,6 +53,7 @@ if not set -q __abbrs_initi
     # Arch
     abbr -a pu      'pacaur -Syu'
     abbr -a pi      'pacaur -S'
+    abbr -a pr      'pacaur -Rs'
 
     # Vim
     abbr -a v       'vim'
