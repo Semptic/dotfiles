@@ -37,6 +37,7 @@ if not set -q __abbrs_initi
     abbr -a gf      'git fetch --prune --all'
     abbr -a gm      'git merge'
     abbr -a gmm     'git merge master'
+    abbr -a gmom    'git fetch origin master; and git merge origin/master'
     abbr -a gp      'git push'
     abbr -a gb      'git branch --verbose'
     abbr -a gba     'git branch --verbose --all'
