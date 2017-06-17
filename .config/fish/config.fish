@@ -9,6 +9,9 @@ set -x EDITOR 'vim -f'
 set fish_user_paths $fish_user_paths $HOME/.local/bin
 set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
 
+set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+
 # status --is-interactive; and . (pyenv init -|psub)
 # status --is-interactive; and . (pyenv virtualenv-init -|psub)
 
