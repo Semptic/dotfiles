@@ -37,7 +37,7 @@ if not set -q __abbrs_initi
     abbr -a gcb     'git checkout -b'
     abbr -a gcf     'git checkout -b feature/'
     abbr -a grc     'git rm --cached'
-    abbr -a gf      'git fetch --prune --all'
+    abbr -a gf      'git fetch --all'
     abbr -a gm      'git merge'
     abbr -a gmm     'git merge master'
     abbr -a gmom    'git fetch origin master; and git merge origin/master'
