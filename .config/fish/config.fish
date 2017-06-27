@@ -6,6 +6,9 @@
 
 set -x EDITOR 'vim -f'
 
+# Workarround til sbt 0.13.16
+set -x TERM xterm-color
+
 set fish_user_paths $fish_user_paths $HOME/.local/bin
 set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
 
