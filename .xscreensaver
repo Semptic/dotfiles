@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.36 for semptic on Wed Jun 28 08:36:03 2017.
+# Written by xscreensaver-demo 5.36 for semptic on Wed Jun 28 16:18:40 2017.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:01:00
@@ -24,11 +24,11 @@ fadeTicks:	20
 captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		*-medium-r-*-140-*-m-*
-dpmsEnabled:	False
-dpmsQuickOff:	False
+dpmsEnabled:	True
+dpmsQuickOff:	True
 dpmsStandby:	0:05:00
-dpmsSuspend:	0:07:00
-dpmsOff:	0:10:00
+dpmsSuspend:	0:05:00
+dpmsOff:	0:05:00
 grabDesktopImages:  False
 grabVideoFrames:    False
 chooseRandomImages: False
