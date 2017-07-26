@@ -200,3 +200,4 @@ bindsym $mod+Shift+grave exec --no-startup-id  i3-input -F 'move container to wo
 
 for_window [class="st"] border pixel 1
 for_window [class="^factorio$"] border pixel 0
+for_window [class="^Chromium$"] border pixel 1
