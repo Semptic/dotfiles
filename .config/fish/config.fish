@@ -62,7 +62,7 @@ if not set -q __abbrs_initi
     
     # Arch
     abbr -a pu      'pacaur -Syu'
-    abbr -a pi      'pacaur -S'
+    abbr -a pi      'pacaur -Sy'
     abbr -a pr      'pacaur -Rs'
 
     # Vim
@@ -70,7 +70,7 @@ if not set -q __abbrs_initi
 
     # File edit
     abbr -a ei3     'vim ~/.config/i3/config'
-    abbr -a egit     'vim ~/.gitconfig'
+    abbr -a egit    'vim ~/.gitconfig'
     abbr -a efish   'vim ~/.config/fish/config.fish'
     abbr -a evim    'vim ~/.vim/vimrc.vim ~/.vim/plugins.vim ~/.vim/plugins_config.vim ~/.vimrc'
 
