@@ -14,6 +14,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'tpope/vim-fugitive'
 Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'drmikehenry/vim-fontsize'
 " Plugin 'LnL7/vim-nix'
 
 
