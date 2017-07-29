@@ -54,7 +54,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st -e tmux
+bindsym $mod+Return exec termite -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -198,6 +198,6 @@ bindsym $mod+Shift+grave exec --no-startup-id  i3-input -F 'move container to wo
 # bindsym XF86AudioLowerVolume  exec amixer -q sset Master 5%- unmute
 # bindsym XF86AudioMute exec amixer -q sset Master toggle
 
-for_window [class="st"] border pixel 1
+for_window [class="^Termite$"] border pixel 1
 for_window [class="^factorio$"] border pixel 0
 for_window [class="^Chromium$"] border pixel 1
