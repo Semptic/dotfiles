@@ -6,28 +6,22 @@
 #
 
 # Load xresources
-set_from_resource $background background
-set_from_resource $foreground foreground
-set_from_resource $fadeColor fadeColor
-set_from_resource $cursorColor cursorColor
-set_from_resource $pointerColorBackground pointerColorBackground
-set_from_resource $pointerColorForeground pointerColorForeground
-set_from_resource $color0 color0
-set_from_resource $color1 color1
-set_from_resource $color2 color2
-set_from_resource $color3 color3
-set_from_resource $color4 color4
-set_from_resource $color5 color5
-set_from_resource $color6 color6
-set_from_resource $color7 color7
-set_from_resource $color8 color8
-set_from_resource $color9 color9
-set_from_resource $color10 color10
-set_from_resource $color11 color11
-set_from_resource $color12 color12
-set_from_resource $color13 color13
-set_from_resource $color14 color14
-set_from_resource $color15 color15
+set $base03    #002b36
+set $base02    #073642
+set $base01    #586e75
+set $base00    #657b83
+set $base0     #839496
+set $base1     #93a1a1
+set $base2     #eee8d5
+set $base3     #fdf6e3
+set $yellow    #b58900
+set $orange    #cb4b16
+set $red       #dc322f
+set $magenta   #d33682
+set $violet    #6c71c4
+set $blue      #268bd2
+set $cyan      #2aa198
+set $green     #859900
 
 # i3 config file (v4)
 #
@@ -179,11 +173,27 @@ bindsym $mod+r mode "$mode_resize"
 bar {
         status_command i3status
         colors {
-            background $background
-            statusline $color12
-            separator  $color10
+            background $base3
+            statusline $base00
+            separator  $base1
+
+            #                  border   background text
+            focused_workspace  $base3   $cyan     $base3
+            active_workspace   $base3   $violet    $base3
+            inactive_workspace $base01  $base1     $base03
+            urgent_workspace   $magenta $magenta  $base3
         }
 }
+
+# colors
+client.focused $green $green $green $green
+client.focused_inactive $base00 $base00 $base00 $base00 
+client.unfocused $base00 $base00 $base00 $base00
+client.urgent $magenta $magenta $magenta $magenta
+client.placeholder $base00 $base00 $base00 $base00
+
+
+client.background $base3
 
 bindsym $mod+Control+h move workspace to output right
 bindsym $mod+Control+l move workspace to output left
