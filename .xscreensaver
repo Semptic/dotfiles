@@ -1,11 +1,11 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.37 for semptic on Wed Jul 26 21:07:56 2017.
+# Written by xscreensaver-demo 5.37 for semptic on Mon Jul 31 12:26:44 2017.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	4:00:00
 cycle:		0:02:00
-lock:		False
-lockTimeout:	0:00:30
+lock:		True
+lockTimeout:	0:01:00
 passwdTimeout:	0:00:30
 visualID:	default
 installColormap:    True
