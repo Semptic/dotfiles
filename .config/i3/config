@@ -204,9 +204,9 @@ bindsym $mod+grave exec --no-startup-id i3-input -F 'workspace "%s"' -P 'Switch 
 bindsym $mod+Control+grave exec --no-startup-id  i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
 bindsym $mod+Shift+grave exec --no-startup-id  i3-input -F 'move container to workspace "%s"' -P 'Move to workspace: '
 
-# bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ unmute
-# bindsym XF86AudioLowerVolume  exec amixer -q sset Master 5%- unmute
-# bindsym XF86AudioMute exec amixer -q sset Master toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume  exec pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 for_window [class="^Termite$"] border pixel 1
 for_window [class="^factorio$"] border pixel 0
