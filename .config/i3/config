@@ -211,3 +211,4 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 for_window [class="^Termite$"] border pixel 1
 for_window [class="^factorio$"] border pixel 0
 for_window [class="^Chromium$"] border pixel 1
+for_window [class="^Spotify$"] border pixel 1
