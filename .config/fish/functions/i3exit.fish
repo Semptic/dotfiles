@@ -1,9 +1,7 @@
 function i3exit
   switch $argv
       case lock
-          xscreensaver-command -lock
-      case saver
-          xscreensaver-command -activate
+          i3lock
       case logout
           i3-msg exit
       case suspend
