@@ -188,10 +188,10 @@ bar {
 # colors
 #colorclass             border   background text      indicator child_border
 client.focused          $cyan    $cyan      $base3    $cyan
-client.focused_inactive $base00  $base00    $base00   $base00 
+client.focused_inactive $base00  $base00    $base03   $base00 
 client.unfocused        $base01  $base1     $base03   $base01
 client.urgent           $magenta $magenta   $base3    $magenta
-client.placeholder      $base00  $base00    $base00   $base00
+client.placeholder      $base00  $base00    $base03   $base00
 
 client.background       $base3
 
