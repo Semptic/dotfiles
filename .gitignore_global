@@ -1,3 +1,15 @@
+
+# Unix stuff
+.Trash-*
+
+# Ensime IDE
+.ensime
+
+# Intellij IDE
 .idea/
 
-.Trash-*
+# Eclipse IDE
+.cache-main
+.scala_dependencies
+.worksheet
+
