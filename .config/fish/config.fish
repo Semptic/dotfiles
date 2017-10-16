@@ -12,6 +12,10 @@ set -x TERM xterm-color
 set fish_user_paths $fish_user_paths $HOME/.local/bin
 set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
 
+set -x ANDROID_HOME $HOME/.androidsdk
+set fish_user_paths $fish_user_paths $ANDROID_HOME/tools
+set fish_user_paths $fish_user_paths $ANDROID_HOME/platform-tools
+
 set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
@@ -40,6 +44,7 @@ if not set -q __abbrs_initi
     abbr -a gcb     'git checkout -b'
     abbr -a gcf     'git checkout -b feature/'
     abbr -a grc     'git rm --cached'
+    abbr -a grmb    'git branch -d'
     abbr -a gf      'git fetch --all'
     abbr -a gm      'git merge'
     abbr -a gmm     'git merge master'
