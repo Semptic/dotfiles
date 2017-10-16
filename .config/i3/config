@@ -195,6 +195,8 @@ client.placeholder      $base00  $base00    $base03   $base00
 
 client.background       $base3
 
+bindsym --release button2 kill
+
 bindsym $mod+Control+h move workspace to output right
 bindsym $mod+Control+l move workspace to output left
 bindsym $mod+Control+j move workspace to output down
