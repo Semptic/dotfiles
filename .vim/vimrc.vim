@@ -94,17 +94,15 @@ map <Right> <NOP>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set termguicolors
 " Enable syntax highlighting
 syntax enable 
-"let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-"set t_Co=256
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
+set t_Co=256
 set background=light
 
-try
-    colorscheme solarized
-catch
-endtry
+colorscheme gruvbox
 
 "hi Normal ctermbg=NONE
 "hi NonText ctermbg=NONE
@@ -221,15 +219,14 @@ set viminfo^=%
 " => Status line
 """"""""""""""""""""""""""""""
 " Always show the status line
-set laststatus=2
+" set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Setup Powerline
-set rtp+=~/.local/lib/python3.5/site-packages/powerline/bindings/vim
-let g:Powerline_symbols='fancy'
-
+" set rtp+=~/.local/lib/python3.5/site-packages/powerline/bindings/vim
+" let g:Powerline_symbols='fancy'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings

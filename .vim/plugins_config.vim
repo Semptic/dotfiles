@@ -23,6 +23,20 @@ setlocal textwidth=79
 setlocal foldmethod=expr
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_theme = 'gruvbox'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => gruvbox
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:gruvbox_italic=1
+let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_contrast_dark = 'hard'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-orgmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map for pdfpc

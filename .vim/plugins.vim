@@ -15,6 +15,10 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'tpope/vim-fugitive'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'drmikehenry/vim-fontsize'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'morhetz/gruvbox'
 " Plugin 'LnL7/vim-nix'
 
 
