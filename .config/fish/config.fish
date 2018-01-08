@@ -1,4 +1,10 @@
-# test $TERM != "screen-256color"; and exec tmux
+# Set gruvbox colors
+set -l GRUVBOX_SCRIPT ~/.vim/bundle/gruvbox/gruvbox_256palette.sh
+if test -f $GRUVBOX_SCRIPT
+    bash $GRUVBOX_SCRIPT
+end
+
+ test $TERM != "screen-256color"; and exec tmux
 
 # set fish_function_path $fish_function_path "/run/current-system/sw/lib/python3.5/site-packages/powerline/bindings/fish/"
 
@@ -7,14 +13,10 @@
 set -x EDITOR 'vim -f'
 
 # Workarround til sbt 0.13.16
-set -x TERM xterm-color
+# set -x TERM xterm-color
 
 set fish_user_paths $fish_user_paths $HOME/.local/bin
 set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
-
-set -x ANDROID_HOME $HOME/.androidsdk
-set fish_user_paths $fish_user_paths $ANDROID_HOME/tools
-set fish_user_paths $fish_user_paths $ANDROID_HOME/platform-tools
 
 set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
@@ -66,25 +68,16 @@ if not set -q __abbrs_initi
     
     
     # Arch
-    abbr -a pu      'pacaur -Syu'
-    abbr -a pi      'pacaur -Sy'
-    abbr -a pr      'pacaur -Rs'
+    abbr -a u      'yaourt -Syu --aur'
+    abbr -a i      'yaourt -Sy'
+    abbr -a r      'yaourt -Rs'
 
     # Vim
     abbr -a v       'vim'
 
-    # File edit
-    abbr -a ei3     'vim ~/.config/i3/config'
-    abbr -a egit    'vim ~/.gitconfig'
-    abbr -a efish   'vim ~/.config/fish/config.fish'
-    abbr -a evim    'vim ~/.vim/vimrc.vim ~/.vim/plugins.vim ~/.vim/plugins_config.vim ~/.vimrc'
-
     # sudo
     abbr -a s       'sudo'
     abbr -a se      'sudoedit'
-
-    # ranger
-    abbr -a r       'ranger'
 end
 
 # Setup bobthefish theme
@@ -92,6 +85,6 @@ set -g theme_display_vi yes
 set -g theme_display_cmd_duration yes
 set -g theme_display_date no
 set -g theme_powerline_fonts no
-set -g theme_color_scheme solarized-light
+set -g theme_color_scheme gruvbox
 set -g theme_nerd_fonts yes
 set -g theme_display_user no
