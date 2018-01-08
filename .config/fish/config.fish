@@ -4,26 +4,33 @@ if test -f $GRUVBOX_SCRIPT
     bash $GRUVBOX_SCRIPT
 end
 
- test $TERM != "screen-256color"; and exec tmux
+# Setup bobthefish theme
+set -g theme_display_vi yes
+set -g theme_display_cmd_duration no
+set -g theme_display_date no
+set -g theme_display_git yes
 
-# set fish_function_path $fish_function_path "/run/current-system/sw/lib/python3.5/site-packages/powerline/bindings/fish/"
+set -g theme_color_scheme gruvbox
 
-# powerline-setup
+set -g theme_powerline_fonts no
+set -g theme_nerd_fonts yes
 
+set -g theme_display_hostname no
+set -g theme_display_user no
+
+# Set default editor
 set -x EDITOR 'vim -f'
 
-# Workarround til sbt 0.13.16
-# set -x TERM xterm-color
 
+# Set local bin paths
 set fish_user_paths $fish_user_paths $HOME/.local/bin
 set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
 
+# Setup fzf
 set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
-# status --is-interactive; and . (pyenv init -|psub)
-# status --is-interactive; and . (pyenv virtualenv-init -|psub)
-
+# Setup abbrs
 if not set -q __abbrs_initi
     set -U __abbrs_initi
 
@@ -80,11 +87,6 @@ if not set -q __abbrs_initi
     abbr -a se      'sudoedit'
 end
 
-# Setup bobthefish theme
-set -g theme_display_vi yes
-set -g theme_display_cmd_duration yes
-set -g theme_display_date no
-set -g theme_powerline_fonts no
-set -g theme_color_scheme gruvbox
-set -g theme_nerd_fonts yes
-set -g theme_display_user no
+# Always start tmux
+test $TERM != "screen-256color"; and exec tmux
+
