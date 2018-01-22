@@ -31,8 +31,8 @@ set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow -g "!{.git,
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
 # Setup abbrs
-if not set -q __abbrs_initi
-    set -U __abbrs_initi
+if status --is-interactive
+    set -g fish_user_abbreviations
 
     # Audible to mp3
     abbr -a audible 'bash AAXtoMP3 --single 9bb94d07'
