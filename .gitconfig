@@ -1,5 +1,5 @@
 [user]
-	email = stefan.kuhn@mailbox.org
+    email = stefan@kuhn.bayern
 	name = Stefan Kuhn
 [core]
 	excludesfile = ~/.gitignore_global
@@ -13,3 +13,5 @@
 	hist = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [push]
 	default = current
+[includeIf "gitdir:~/Projects/"]
+    path = ~/Projects/onpage/.gitconfig
