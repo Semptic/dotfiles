@@ -59,9 +59,12 @@ if status --is-interactive
     abbr -a gmm     'git merge master'
     abbr -a gmom    'git fetch origin master; and git merge origin/master'
     abbr -a gp      'git push'
+    abbr -a gpl     'git pull'
     abbr -a gb      'git branch --verbose'
     abbr -a gba     'git branch --verbose --all'
     abbr -a gl      'git lol'
+    abbr -a gclean  'git checkout master; git pull; git branch --merged | grep -v "master" | grep -v \'^*\' | xargs git branch -d;'
+    abbr -a grbom   'git fetch origin master; and git rebase origin/master'
 
     # Dotfile manager (git bare)
     abbr -a da      'dot add'
@@ -85,6 +88,8 @@ if status --is-interactive
     # sudo
     abbr -a s       'sudo'
     abbr -a se      'sudoedit'
+
+    abbr -a sshno   'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 end
 
 # Always start tmux
