@@ -47,6 +47,9 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Toggle sratchpad
+bindsym F1 [con_mark="quake"] scratchpad show
+
 # start a terminal
 bindsym $mod+Return exec termite -e tmux
 
@@ -222,6 +225,10 @@ bindsym $mod+Shift+grave exec --no-startup-id  i3-input -F 'move container to wo
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume  exec pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+
+exec --no-startup-id termite --title "quake"
+for_window [instance="termite" title="quake"] floating enable, mark "quake", move scratchpad, scratchpad show;
+for_window [con_mark="quake"] resize grow left 300, resize grow right 300, resize grow down 150, resize grow up 100, move scratchpad;
 
 for_window [class="^Termite$"] border pixel 1
 for_window [class="^factorio$"] border pixel 0
