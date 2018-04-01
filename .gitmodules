@@ -8,3 +8,6 @@
 	path = .config/i3/scripts/i3lock-multimonitor
 	url = https://github.com/shikherverma/i3lock-multimonitor.git
 	branch = master
+[submodule "/home/semptic/.emacs.d"]
+	path = /home/semptic/.emacs.d
+	url = git@github.com:syl20bnr/spacemacs.git
