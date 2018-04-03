@@ -1,7 +1,14 @@
-# Set gruvbox colors
-set -l GRUVBOX_SCRIPT ~/.vim/bundle/gruvbox/gruvbox_256palette.sh
-if test -f $GRUVBOX_SCRIPT
-    bash $GRUVBOX_SCRIPT
+if test -n "$EMACS"
+    set -x TERM eterm-color
+    echo "Emacs"
+end
+
+if status is-interactive
+    tmux
+    clear
+end
+function fish_title
+    true
 end
 
 # Setup bobthefish theme
@@ -20,7 +27,6 @@ set -g theme_display_user no
 
 # Set default editor
 set -x EDITOR 'vim -f'
-
 
 # Set local bin paths
 set fish_user_paths $fish_user_paths $HOME/.local/bin
@@ -92,6 +98,4 @@ if status --is-interactive
     abbr -a sshno   'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 end
 
-# Always start tmux
-test $TERM != "screen-256color"; and exec tmux
 
