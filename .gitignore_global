@@ -13,3 +13,6 @@
 .scala_dependencies
 .worksheet
 
+# Ensime
+.ensime
+
