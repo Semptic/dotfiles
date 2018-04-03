@@ -237,4 +237,4 @@ for_window [class="^factorio$"] border pixel 0
 for_window [class="^Chromium$"] border pixel 1
 for_window [class="^Spotify$"] border pixel 1
 
-feh --bg-scale ~/.config/i3/wallpaper.png
+exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
