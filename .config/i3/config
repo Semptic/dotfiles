@@ -49,6 +49,7 @@ floating_modifier $mod
 
 # Toggle sratchpad
 bindsym F1 [con_mark="quake"] scratchpad show
+bindsym $mod+backslash scratchpad show
 
 # start a terminal
 bindsym $mod+Return exec termite -e tmux
@@ -231,6 +232,9 @@ for_window [instance="termite" title="quake"] floating enable, mark "quake", mov
 for_window [con_mark="quake"] resize grow left 300, resize grow right 300, resize grow down 150, resize grow up 100, move scratchpad;
 
 for_window [class="^Termite$"] border pixel 1
+for_window [class="^Emacs$"] border pixel 0
 for_window [class="^factorio$"] border pixel 0
 for_window [class="^Chromium$"] border pixel 1
 for_window [class="^Spotify$"] border pixel 1
+
+feh --bg-scale ~/.config/i3/wallpaper.png
