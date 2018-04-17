@@ -73,6 +73,7 @@ if status --is-interactive
     abbr -a gp      'git push'
     abbr -a gpf     'git push -f'
     abbr -a gpl     'git pull'
+    abbr -a gpr     'git pull -r'
     abbr -a gb      'git branch --verbose'
     abbr -a gba     'git branch --verbose --all'
     abbr -a gl      'git lol'
