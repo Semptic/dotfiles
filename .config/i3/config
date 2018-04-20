@@ -176,8 +176,8 @@ set $mode_screen screen configuration (w) work (l) laptop
 # resize window (you can also use the mouse for that)
 mode "$mode_screen" {
         # These bindings trigger as soon as you enter the resize mode
-        bindsym w exec --no-startup-id "sh -c 'xrandr --output DP-4 --auto --output DP-3.2 --auto --right-of DP-4 --output DP-3.1 --auto --right-of DP-3.2 && ~/.config/polybar/launch.sh'", mode "default"
-        bindsym l exec --no-startup-id "sh -c 'xrandr --output DP-3.1 --off --output DP-3.2 --off --output DP-4 --auto --panning 0x0 && ~/.config/polybar/launch.sh'", mode "default"
+        bindsym w exec --no-startup-id "sh -c 'xrandr --output DP-4 --off --output DP-3.1 --off --output DP-3.2 --off && sleep 5s && xrandr --output DP-3.1 --auto --primary --output DP-4 --auto --left-of DP-3.1 --output DP-3.2 --auto --right-of DP-3.1 && i3-msg restart'", mode "default"
+        bindsym l exec --no-startup-id "sh -c 'xrandr --output DP-4 --off --output DP-3.1 --off --output DP-3.2 --off && sleep 5s && xrandr --output DP-4 --auto --panning 0x0 && i3-msg restart'", mode "default"
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -212,7 +212,7 @@ client.placeholder      $base00  $base00    $base03   $base00
 
 client.background       $base3
 
-# focus_follows_mouse no
+focus_follows_mouse no
 mouse_warping none
 
 bindsym --release button2 kill
@@ -232,7 +232,7 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 exec --no-startup-id termite --title "quake"
 for_window [instance="termite" title="quake"] floating enable, mark "quake", move scratchpad, scratchpad show;
-for_window [con_mark="quake"] resize grow left 300, resize grow right 300, resize grow down 150, resize grow up 100, move scratchpad;
+for_window [con_mark="quake"] resize set 1400 px 800 px, move position center, move scratchpad;
 
 for_window [class="^Termite$"] border pixel 1
 for_window [class="^Emacs$"] border pixel 0
