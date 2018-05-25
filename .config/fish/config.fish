@@ -51,6 +51,7 @@ if status --is-interactive
     abbr -a g       'git'
     abbr -a gs      'git status' # Conflicts with ghostscript
     abbr -a gcl     'git clone --recursive'
+    abbr -a gclc    'git clone --recursive (xclip -selection c -out)'
     abbr -a ga      'git add'
     abbr -a gr      'git rebase'
     abbr -a grm     'git rebase origin/master'
@@ -72,6 +73,7 @@ if status --is-interactive
     abbr -a gmm     'git merge master'
     abbr -a gmom    'git fetch origin master; and git merge origin/master'
     abbr -a gp      'git push'
+    abbr -a gpu     'git push -u origin (git rev-parse --abbrev-ref HEAD)'
     abbr -a gpf     'git push -f'
     abbr -a gpl     'git pull'
     abbr -a gpr     'git pull -r'
