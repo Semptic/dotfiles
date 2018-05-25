@@ -234,11 +234,8 @@ exec --no-startup-id termite --title "quake"
 for_window [instance="termite" title="quake"] floating enable, mark "quake", move scratchpad, scratchpad show;
 for_window [con_mark="quake"] resize set 1400 px 800 px, move position center, move scratchpad;
 
-for_window [class="^Termite$"] border pixel 1
-for_window [class="^Emacs$"] border pixel 0
-for_window [class="^factorio$"] border pixel 0
-for_window [class="^Chromium$"] border pixel 1
-for_window [class="^Spotify$"] border pixel 1
+default_border pixel 
+hide_edge_borders smart
 
 exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
 
