@@ -28,5 +28,5 @@
     lg = !"git lg1"
 	hist = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
-[includeIf "gitdir:~/Projects/"]
+[includeIf "gitdir:~/Projects/onpage"]
     path = ~/Projects/onpage/.gitconfig
