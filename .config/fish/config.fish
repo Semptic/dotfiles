@@ -3,6 +3,10 @@ if test -n "$EMACS"
     echo "Emacs"
 end
 
+# Setup coursier
+
+set -g COURSIER_CACHE ~/.coursier-cache
+
 if status is-interactive
     tmux
     clear
@@ -107,6 +111,8 @@ if status --is-interactive
     abbr -a se      'sudoedit'
 
     abbr -a sshno   'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+
+    abbr -a pw      'diceware -n9 ~/MyCloud/Documents/diceware_english.txt'
 end
 
-
+eval (ssh-agent -c)
