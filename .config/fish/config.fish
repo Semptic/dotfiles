@@ -68,7 +68,6 @@ if status --is-interactive
     abbr -a gcm     'git commit -m'
     abbr -a gco     'git checkout'
     abbr -a gcom    'git checkout master'
-    expand-word -p '^gct.+' -e 'printf "git checkout -t origin/%s" (commandline -t | sed s/gct//g)'
     abbr -a gcb     'git checkout -b'
     abbr -a grc     'git rm --cached'
     abbr -a grmb    'git branch -d'
@@ -88,10 +87,10 @@ if status --is-interactive
     abbr -a grbom   'git fetch origin master; and git rebase origin/master'
 
     # Dotfile manager (git bare)
-    abbr -a da      'dot add'
-    abbr -a dp      'dot push'
-    abbr -a dcm     'dot commit -m'
-    abbr -a ds      'dot status'
+    abbr -a da      'dotfiles add'
+    abbr -a dp      'dotfiles push'
+    abbr -a dcm     'dotfiles commit -m'
+    abbr -a ds      'dotfiles status'
 
     # docker
     abbr -a d       'docker'
