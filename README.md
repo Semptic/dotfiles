@@ -24,7 +24,7 @@ dotfiles submodule update --init --recursive
 ```
 dotfiles config --local status.showUntrackedFiles no
 ```
-
+6) Install vim plugins: Open vim and run `:PluginInstall`
 
 
 
