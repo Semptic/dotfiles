@@ -3,6 +3,11 @@ if test -n "$EMACS"
     echo "Emacs"
 end
 
+# Enable the fuck if installed
+if type -q thefuck
+    thefuck --alias | source
+end
+
 # Setup coursier
 
 set -g COURSIER_CACHE ~/.coursier-cache
