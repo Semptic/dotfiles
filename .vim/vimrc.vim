@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""""
 " Vim needs a POSIX-Compliant shell. Fish is not.
 if &shell =~# 'fish$'
-  set shell=sh
+  set shell=/bin/bash
 endif
 
 " Sets how many lines of history VIM has to remember
@@ -275,7 +275,7 @@ map <leader>sd zw
 map <leader>sl z=
 map <leader>ss 1z=
 
-setlocal spell spelllang=de_de,en_us
+" setlocal spell spelllang=de,en
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
