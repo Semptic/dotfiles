@@ -1,0 +1,86 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="/home/work">
+          <value>
+            <RecentProjectMetaInfo projectWorkspaceId="1YySuEv3hWNtMao4RC49vTLJzOL">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IU-193.6494.35" />
+              <option name="buildTimestamp" value="1581395751177" />
+              <frame x="1945" y="154" width="1400" height="1000" />
+              <option name="productionCode" value="IU" />
+              <option name="projectOpenTimestamp" value="1583913563208" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/wes/crawler">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1Yw4AOa1U5nSLy252bfTe42MU9H">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IU-193.6494.35" />
+              <option name="buildTimestamp" value="1581395751177" />
+              <option name="productionCode" value="IU" />
+              <option name="projectOpenTimestamp" value="1583913601658" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/wes/crawler-blacklist-model">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1YwHt9Ep8tHj5EUyg757DTapU1V">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IU-193.6494.35" />
+              <option name="buildTimestamp" value="1581395751177" />
+              <option name="productionCode" value="IU" />
+              <option name="projectOpenTimestamp" value="1583913601658" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/wes/crawler-stream">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1YuLFrQzVDWDoi9uppdRET0Yoyo">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IU-193.6494.35" />
+              <option name="buildTimestamp" value="1581395751177" />
+              <option name="productionCode" value="IU" />
+              <option name="projectOpenTimestamp" value="1583913601658" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/wes/wat-infrastructure">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1YwO6UBevfdxUDwJq7294I4G9AX">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IU-193.6494.35" />
+              <option name="buildTimestamp" value="1581395751177" />
+              <option name="productionCode" value="IU" />
+              <option name="projectOpenTimestamp" value="1583913601658" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Projects/wes/wes-api">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1YySzIoKNaeJUFL1TU40YqxuQ0m">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IU-193.6494.35" />
+              <option name="buildTimestamp" value="1581395751177" />
+              <option name="productionCode" value="IU" />
+              <option name="projectOpenTimestamp" value="1583913601658" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/Projects/wes" />
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/Projects/wes/wes-api" />
+        <option value="$USER_HOME$/Projects/wes/wat-infrastructure" />
+        <option value="$USER_HOME$/Projects/wes/crawler-stream" />
+        <option value="$USER_HOME$/Projects/wes/crawler-blacklist-model" />
+        <option value="$USER_HOME$/Projects/wes/crawler" />
+        <option value="/home/work" />
+      </list>
+    </option>
+  </component>
+</application>

@@ -1,0 +1,27 @@
+<application>
+  <component name="NotRoamableUiSettings">
+    <option name="fontFace" value="Cantarell Regular" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileTemplates.SelectedTemplate" value="HTML File" />
+    <property name="MarketplacePluginsSearchHistory" value="/sortBy:downloads&#10;/sortBy:rating&#10;comp&#10;co&#10;php" />
+    <property name="SettingsSearchHistory" value="scala&#10;sbt&#10;scalafm" />
+    <property name="ask.about.ctrl.y.shortcut" value="true" />
+    <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="defaultJdkConfigured" value="true" />
+    <property name="evlsprt3.193" value="14" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/Projects/wes/wes-api&#10;/home/work" />
+    <property name="file.gist.reindex.count" value="7" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="ide.memory.adjusted" value="true" />
+    <property name="installed.kotlin.plugin.version" value="1.3.61-release-IJ2019.3-1" />
+    <property name="kotlin.plugin.releaseDate" value="1.3.61-release-IJ2019.3-1:2019-11-26" />
+    <property name="lastTip" value="1" />
+    <property name="packagesearch.endpoint.url.fulltext" value="https://package-search.services.jetbrains.com/api/search/idea/fulltext" />
+    <property name="packagesearch.endpoint.url.suggest" value="https://package-search.services.jetbrains.com/api/search/idea/suggest" />
+    <property name="packagesearch.status.updated.ts" value="1583913562358" />
+    <property name="settings.code.style.selected.tab.Scala" value="ScalaDoc" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="ts.lib.d.ts.version" value="3.7.2" />
+  </component>
+</application>
