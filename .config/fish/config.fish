@@ -49,6 +49,9 @@ set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 if status --is-interactive
     set -g fish_user_abbreviations
 
+    # Fuck
+    abbr -a f fuck
+
     # Audible to mp3
     abbr -a audible 'bash AAXtoMP3 --single 9bb94d07'
 
