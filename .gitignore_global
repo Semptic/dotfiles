@@ -7,6 +7,7 @@
 
 # Intellij IDE
 .idea/
+*.iml
 
 # Eclipse IDE
 .cache-main
