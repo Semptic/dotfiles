@@ -1,3 +1,2 @@
-package bang-bang
-theme agnoster
+package git@github.com:oh-my-fish/plugin-rustup.git
 theme default
