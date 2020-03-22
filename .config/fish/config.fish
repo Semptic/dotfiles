@@ -106,9 +106,8 @@ if status --is-interactive
     
     
     # Arch
-    abbr -a u      'yaourt -Syu --aur'
-    abbr -a i      'yaourt -Sy'
-    abbr -a r      'yaourt -Rs'
+    abbr -a u      'yay -Syu --devel --timeupdate'
+    abbr -a r      'yay -Rs'
 
     # Vim
     abbr -a v       'vim'
