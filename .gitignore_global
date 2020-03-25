@@ -17,3 +17,7 @@
 # Ensime
 .ensime
 
+# metals
+.metals/
+.bloop/
+project/metals.sbt
