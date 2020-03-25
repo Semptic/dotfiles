@@ -100,6 +100,8 @@ if status --is-interactive
     abbr -a dcm     'dotfiles commit -m'
     abbr -a ds      'dotfiles status'
 
+    abbr -a emr     'ssh -ND 8157'
+
     # docker
     abbr -a d       'docker'
     abbr -a dc      'docker-compose'
