@@ -1,6 +1,6 @@
-if test -n "$EMACS"
-    set -x TERM eterm-color
-    echo "Emacs"
+# Setup gnome keyring
+if test -n "$DESKTOP_SESSION"
+    set (gnome-keyring-daemon --start | string split "=")
 end
 
 # Enable the fuck if installed
@@ -8,14 +8,12 @@ if type -q thefuck
     thefuck --alias | source
 end
 
-# Setup coursier
-
-set -g COURSIER_CACHE ~/.coursier-cache
-
+# Start tmux
 if status is-interactive
     tmux
     clear
 end
+
 function fish_title
     true
 end
@@ -55,10 +53,6 @@ if status --is-interactive
     # Audible to mp3
     abbr -a audible 'bash AAXtoMP3 --single 9bb94d07'
 
-    # Pass
-    abbr -a pgp     'pass git push'
-    abbr -a p       'pass'
-
     # Git
     abbr -a g       'git'
     abbr -a gs      'git status' # Conflicts with ghostscript
@@ -95,32 +89,18 @@ if status --is-interactive
     abbr -a grbom   'git fetch origin master; and git rebase origin/master'
 
     # Dotfile manager (git bare)
+    abbr -a d       'dotfiles'
+    abbr -a dpl     'dotfiles pull'
+    abbr -a ds      'dotfiles status'
     abbr -a da      'dotfiles add'
     abbr -a dp      'dotfiles push'
     abbr -a dcm     'dotfiles commit -m'
-    abbr -a ds      'dotfiles status'
 
-    abbr -a emr     'ssh -ND 8157'
-
-    # docker
-    abbr -a d       'docker'
-    abbr -a dc      'docker-compose'
-    
-    
     # Arch
     abbr -a u      'yay -Syu --devel --timeupdate'
     abbr -a r      'yay -Rs'
 
-    # Vim
-    abbr -a v       'vim'
-
-    # sudo
-    abbr -a s       'sudo'
-    abbr -a se      'sudoedit'
-
     abbr -a sshno   'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-
-    abbr -a pw      'diceware -n9 ~/MyCloud/Documents/diceware_english.txt'
 end
 
 eval (ssh-agent -c)
