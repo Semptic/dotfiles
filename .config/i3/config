@@ -51,9 +51,6 @@ floating_modifier $mod
 # bindsym F1 [con_mark="quake"] scratchpad show
 # bindsym $mod+backslash scratchpad show
 
-# start a terminal
-bindsym $mod+Return exec alacritty
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -154,7 +151,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #     bindsym Escape mode "default"
 # }
 
-bindsym $mod+Escape mode "$mode_power"
+# bindsym $mod+Escape mode "$mode_power"
 
 set $mode_resize resize
 # resize window (you can also use the mouse for that)
@@ -222,6 +219,19 @@ bindsym $mod+Control+l move workspace to output left
 bindsym $mod+Control+j move workspace to output down
 bindsym $mod+Control+k move workspace to output up
 
+
+##############################################################################################################################
+# Setup scratchpad terminal
+##############################################################################################################################
+# Start terminal
+exec_always --no-startup-id pgrep -u -f ".*alacritty.*--class quake.*" > /dev/null || alacritty --class "quake"
+# Configure terminal
+for_window [class="Alacritty" instance="quake"] floating enable, mark "quake", move scratchpad, scratchpad show
+for_window [con_mark="quake"] resize set 1400 px 800 px, move position center, move scratchpad
+# Set keybind
+bindsym $mod+Return [con_mark="quake"] scratchpad show
+##############################################################################################################################
+#
 # bindsym $mod+grave exec --no-startup-id i3-input -F 'workspace "%s"' -P 'Switch to workspace: '
 # bindsym $mod+Control+grave exec --no-startup-id  i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
 # bindsym $mod+Shift+grave exec --no-startup-id  i3-input -F 'move container to workspace "%s"' -P 'Move to workspace: '
@@ -237,8 +247,12 @@ bindsym $mod+Control+k move workspace to output up
 default_border pixel 
 hide_edge_borders smart
 
+# Start compitz
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+# Disable touchpad
 exec --no-startup-id xinput set-prop "Synaptics TM3149-002" "Device Enabled" 0
+# Start network manager applet
+exec --no-startup-id nm-applet
 
 # exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
 
