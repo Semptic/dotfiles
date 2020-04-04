@@ -54,6 +54,8 @@ floating_modifier $mod
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# start terminal
+bindsym $mod+Return exec alacritty
 # start dmenu (a program launcher)
 bindsym $mod+space exec "rofi -show combi"
 
@@ -229,7 +231,7 @@ exec_always --no-startup-id pgrep -u -f ".*alacritty.*--class quake.*" > /dev/nu
 for_window [class="Alacritty" instance="quake"] floating enable, mark "quake", move scratchpad, scratchpad show
 for_window [con_mark="quake"] resize set 1400 px 800 px, move position center, move scratchpad
 # Set keybind
-bindsym $mod+Return [con_mark="quake"] scratchpad show
+bindsym F1 [con_mark="quake"] scratchpad show
 ##############################################################################################################################
 #
 # bindsym $mod+grave exec --no-startup-id i3-input -F 'workspace "%s"' -P 'Switch to workspace: '
