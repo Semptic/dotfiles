@@ -1,2 +1,3 @@
 package git@github.com:oh-my-fish/plugin-rustup.git
+theme bobthefish
 theme default
