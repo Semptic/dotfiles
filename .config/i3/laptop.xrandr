@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Clean all screens
+# Clean all screens
+for screen in $(xrandr --current | grep ' connected' | cut -d' ' -f1); do 
+	xrandr --output $screen --pos 0x0 --panning 0x0
+	xrandr --output $screen --off
+done
+
+# Wait some time
+sleep 5
+
+# Setup all three screens
+xrandr --output "DP-4" --auto 
+
+~/.config/polybar/lauch.sh

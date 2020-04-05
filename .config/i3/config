@@ -175,8 +175,8 @@ set $mode_screen screen configuration (w) work (l) laptop
 # resize window (you can also use the mouse for that)
 mode "$mode_screen" {
         # These bindings trigger as soon as you enter the resize mode
-        bindsym w exec --no-startup-id "sh -c 'xrandr --output DP-4 --off --output DP-3.1 --off --output DP-3.2 --off && sleep 5s && xrandr --dpi 96 --output DP-4 --auto --output DP-3.1 --primary --left-of DP-4 --auto --output DP-3.2 --left-of DP-3.1 --auto && i3-msg restart'", mode "default"
-        bindsym l exec --no-startup-id "sh -c 'xrandr --output DP-4 --off --output DP-3.1 --off --output DP-3.2 --off && sleep 5s && xrandr --dpi 96 --output DP-4 --auto --panning 0x0 && i3-msg restart'", mode "default"
+        bindsym w exec --no-startup-id "~/.config/i3/work.xrandr", mode "default"
+        bindsym l exec --no-startup-id "~/.config/i3/laptop.xrandr", mode "default"
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"

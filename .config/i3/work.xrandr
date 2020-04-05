@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Clean all screens
+for screen in $(xrandr --current | grep ' connected' | cut -d' ' -f1); do 
+	xrandr --output $screen --pos 0x0 --panning 0x0
+	xrandr --output $screen --off
+done
+
+# Wait some time
+sleep 5
+
+# Setup all three screens
+xrandr --output "DP-4" --auto --output "DP-3.1" --auto --primary --left-of "DP-4" --output "DP-3.2" --auto --rotate right --left-of "DP-3.1"
+
+~/.config/polybar/launch.sh

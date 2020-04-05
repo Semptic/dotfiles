@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Clean all screens
+# screens=$(xrandr --current | grep ' connected' | cut -d' ' -f1)
+# xrandr --auto
+for screen in $(xrandr --current | grep ' connected' | cut -d' ' -f1); do 
+	xrandr --output $screen --pos 0x0 --panning 0x0
+	xrandr --output $screen --off
+done
+
+# Wait some time
+sleep 5
+
+# Setup all three screens
+xrandr --output "DP-4" --primary --auto --output "DP-0" --auto --above "DP-4"
