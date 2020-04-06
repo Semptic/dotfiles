@@ -13,4 +13,6 @@ sleep 5
 # Setup all three screens
 xrandr --output "DP-4" --auto 
 
+sleep 10
+
 ~/.config/polybar/lauch.sh

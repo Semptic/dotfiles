@@ -12,4 +12,6 @@ sleep 5
 # Setup all three screens
 xrandr --output "DP-4" --auto --output "DP-3.1" --auto --primary --left-of "DP-4" --output "DP-3.2" --auto --rotate right --left-of "DP-3.1"
 
+sleep 10
+
 ~/.config/polybar/launch.sh
