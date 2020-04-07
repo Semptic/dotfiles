@@ -51,7 +51,7 @@ if status --is-interactive
     abbr -a f fuck
 
     # Audible to mp3
-    abbr -a audible 'bash AAXtoMP3 --single 9bb94d07'
+    abbr -a audible 'bash AAXtoMP3 --single -A 9bb94d07'
 
     # Git
     abbr -a g       'git'
