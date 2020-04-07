@@ -214,8 +214,6 @@ client.background       $base3
 focus_follows_mouse no
 mouse_warping none
 
-bindsym --release button2 kill
-
 bindsym $mod+Control+h move workspace to output right
 bindsym $mod+Control+l move workspace to output left
 bindsym $mod+Control+j move workspace to output down
@@ -255,6 +253,7 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id xinput set-prop "Synaptics TM3149-002" "Device Enabled" 0
 # Start network manager applet
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 
 # exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
 
