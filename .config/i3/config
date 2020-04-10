@@ -224,7 +224,7 @@ bindsym $mod+Control+k move workspace to output up
 # Setup scratchpad terminal
 ##############################################################################################################################
 # Start terminal
-exec_always --no-startup-id pgrep -u -f ".*alacritty.*--class quake.*" > /dev/null || alacritty --class "quake"
+exec_always --no-startup-id pgrep -u "$(whoami)" -f "^alacritty --class quake$" > /dev/null || alacritty --class "quake"
 # Configure terminal
 for_window [class="Alacritty" instance="quake"] floating enable, mark "quake", move scratchpad, scratchpad show
 for_window [con_mark="quake"] resize set 1400 px 800 px, move position center, move scratchpad
@@ -254,6 +254,7 @@ exec --no-startup-id xinput set-prop "Synaptics TM3149-002" "Device Enabled" 0
 # Start network manager applet
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
+# exec --no-startup-id nextcloud
 
 # exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
 
