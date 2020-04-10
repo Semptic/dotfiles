@@ -26,6 +26,23 @@ dotfiles config --local status.showUntrackedFiles no
 ```
 6) Install vim plugins: Open vim and run `:PluginInstall`
 
+## Software
 
+* i3wm
+* polybar
+* alacritty
+* tmux
+* fish
+* oh-my-fish
+* Fira Code Nerd Font
+* Network Manager
+* Network Manager Applet
+* gnome keyring (See [PAM](https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method) to unlock on login)
+* vim (neovim)
+* pavucontrol
 
+## Misc
 
+### Compose Key
+
+To enable the compose key on caps run `setxkbmap -option compose:caps`
