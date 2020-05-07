@@ -42,6 +42,10 @@ dotfiles config --local status.showUntrackedFiles no
 * pavucontrol
 * i3-gnome
 
+## i3-gnome
+
+To make it work properly you need also to disable the desktop with `gsettings set org.gnome.gnome-flashback desktop false`
+
 ## Misc
 
 ### Compose Key
