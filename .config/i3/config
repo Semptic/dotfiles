@@ -139,12 +139,12 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-set $Locker dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock && sleep 1
+set $Locker gnome-screensaver-command --lock && sleep 1
 
 set $mode_power System (l) lock, (u) switch user, (e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_power" {
     bindsym l       exec --no-startup-id $Locker, mode "default"
-    bindsym u       exec --no-startup-id dm-tool lock, mode "default"
+    bindsym u       exec --no-startup-id gdmflexiserver, mode "default"
     bindsym e       exec --no-startup-id i3-msg exit, mode "default"
     bindsym s       exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h       exec --no-startup-id $Locker && systemctl hibernate, mode "default"
