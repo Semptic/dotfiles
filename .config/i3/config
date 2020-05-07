@@ -139,15 +139,17 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-set $mode_power System (l) lock, (e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
+set $Locker dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock && sleep 1
 
+set $mode_power System (l) lock, (u) switch user, (e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_power" {
-    bindsym l       exec --no-startup-id "dm-tool lock", mode "default"
-    bindsym e       exit
-    bindsym s       exec --no-startup-id "systemctl suspend", mode "default"
-    bindsym h       exec --no-startup-id "systemctl hibernate", mode "default"
-    bindsym Shift+r exec --no-startup-id "systemctl -i reboot", mode "default"
-    bindsym Shift+s exec --no-startup-id "systemctl -i poweroff", mode "default"
+    bindsym l       exec --no-startup-id $Locker, mode "default"
+    bindsym u       exec --no-startup-id dm-tool lock, mode "default"
+    bindsym e       exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s       exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h       exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym Shift+r exec --no-startup-id systemctl reboot -i, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -232,13 +234,21 @@ hide_edge_borders smart
 
 # Start compitz
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+
 # Disable touchpad
 exec --no-startup-id xinput set-prop "Synaptics TM3149-002" "Device Enabled" 0
+
 # Start network manager applet
 exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
+# exec --no-startup-id blueman-applet
 exec --no-startup-id nextcloud
 
 # exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Start all the gnome services
+exec --no-startup-id /usr/lib/gsd-xsettings
+exec --no-startup-id gnome-power-manager
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id gnome-flashback

@@ -40,6 +40,7 @@ dotfiles config --local status.showUntrackedFiles no
 * gnome keyring (See [PAM](https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method) to unlock on login)
 * vim (neovim)
 * pavucontrol
+* i3-gnome
 
 ## Misc
 
