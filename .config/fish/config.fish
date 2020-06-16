@@ -7,6 +7,8 @@ end
 if type -q thefuck
     thefuck --alias | source
 end
+# Enable vi mode
+fish_vi_key_bindings
 
 # Start tmux
 if status is-interactive
