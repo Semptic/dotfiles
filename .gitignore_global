@@ -21,3 +21,6 @@
 .metals/
 .bloop/
 project/metals.sbt
+
+# Mac
+.DS_Store
