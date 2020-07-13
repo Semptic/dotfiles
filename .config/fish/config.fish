@@ -1,8 +1,3 @@
-# Setup gnome keyring
-if test -n "$DESKTOP_SESSION"
-    set (gnome-keyring-daemon --start | string split "=")
-end
-
 # Enable the fuck if installed
 if type -q thefuck
     thefuck --alias | source
@@ -10,11 +5,8 @@ end
 # Enable vi mode
 fish_vi_key_bindings
 
-# Start tmux
-if status is-interactive
-    tmux
-    clear
-end
+set -x LC_ALL en_US.UTF-8
+set -x LC_CTYPE en_US.UTF-8
 
 function fish_title
     true
