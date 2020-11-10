@@ -12,6 +12,9 @@ function fish_title
     true
 end
 
+# Add rust bins to path
+source $HOME/.cargo/env
+
 # Setup bobthefish theme
 set -g theme_display_vi yes
 set -g theme_display_cmd_duration no
@@ -48,43 +51,33 @@ if status --is-interactive
     abbr -a audible 'bash AAXtoMP3 --single -A 9bb94d07'
 
     # Git
-    abbr -a g       'git'
     abbr -a gs      'git status' # Conflicts with ghostscript
     abbr -a gcl     'git clone --recursive'
     abbr -a gclc    'git clone --recursive (xclip -selection c -out)'
     abbr -a ga      'git add'
-    abbr -a gr      'git rebase'
     abbr -a grm     'git rebase origin/master'
-    abbr -a grc     'git rebase --continue'
-    abbr -a gra     'git rebase --abort'
-    abbr -a gri     'git rebase --interactive'
+    abbr -a gri     'git rebase --interactive HEAD~5'
     abbr -a grim    'git rebase --interactive origin/master'
     abbr -a gc      'git commit'
     abbr -a gcm     'git commit -m'
-    abbr -a gcm     'git commit -m'
     abbr -a gco     'git checkout'
-    abbr -a gcom    'git checkout master'
     abbr -a gcb     'git checkout -b'
     abbr -a grc     'git rm --cached'
-    abbr -a grmb    'git branch -d'
     abbr -a gf      'git fetch --all'
-    abbr -a gm      'git merge'
     abbr -a gmm     'git merge master'
-    abbr -a gmom    'git fetch origin master; and git merge origin/master'
     abbr -a gp      'git push'
     abbr -a gpu     'git push -u origin (git rev-parse --abbrev-ref HEAD)'
     abbr -a gpf     'git push -f'
     abbr -a gpl     'git pull'
-    abbr -a gpr     'git pull -r'
+    abbr -a gpm     'git checkout master; and git pull'
     abbr -a gb      'git branch --verbose'
     abbr -a gba     'git branch --verbose --all'
     abbr -a gl      'git lol'
     abbr -a gclean  'git checkout master; git pull; git branch --merged | grep -v "master" | grep -v \'^*\' | xargs git branch -d;'
-    abbr -a grbom   'git fetch origin master; and git rebase origin/master'
 
     # Dotfile manager (git bare)
     abbr -a d       'dotfiles'
-    abbr -a dpl     'dotfiles pull'
+    abbr -a dpl     'dotfiles pull --prune'
     abbr -a ds      'dotfiles status'
     abbr -a da      'dotfiles add'
     abbr -a dp      'dotfiles push'
@@ -98,3 +91,4 @@ if status --is-interactive
 end
 
 eval (ssh-agent -c)
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
