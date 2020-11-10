@@ -17,6 +17,9 @@
 # Ensime
 .ensime
 
+# VsCode
+.vscode/
+
 # metals
 .metals/
 .bloop/
