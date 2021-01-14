@@ -26,6 +26,8 @@ dotfiles config --local status.showUntrackedFiles no
 ```
 6) Install vim plugins: Open vim and run `:PluginInstall`
 
+7) Install tmux plugins: Press `prefix` + <kbd>I</kbd> (capital i, as in **I**nstall) to fetch the plugin.
+
 ## Software
 
 * i3wm
