@@ -402,8 +402,8 @@ mouse:
     #   - (Linux/BSD) xdg-open
     #   - (Windows) explorer
     launcher:
-      program: xdg-open
-      args: []
+      program: open
+    # args: []
 
     # URL modifiers
     #
@@ -539,7 +539,10 @@ mouse:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # at once.
-#key_bindings:
+key_bindings:
+  - { key: Key0,     mods: Command, action: ResetFontSize }
+  - { key: Equals,   mods: Command, action: IncreaseFontSize }
+  - { key: Minus,    mods: Command, action: DecreaseFontSize }
   # (Windows, Linux, and BSD only)
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
