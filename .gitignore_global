@@ -23,7 +23,8 @@
 # metals
 .metals/
 .bloop/
-project/metals.sbt
+/project/metals.sbt
+/project/project/
 
 # Mac
 .DS_Store
