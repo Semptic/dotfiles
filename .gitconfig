@@ -2,6 +2,9 @@
     email = semptic@kuhn.cloud
 	name = Stefan Kuhn
 
+[includeIf "gitdir:~/Projects/work/**"]
+    path = ~/Projects/work/.gitconfig
+
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
@@ -29,5 +32,3 @@
     lg = !"git lg1"
 	hist = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
-[includeIf "gitdir:~/Projects/onpage"]
-    path = ~/Projects/onpage/.gitconfig
