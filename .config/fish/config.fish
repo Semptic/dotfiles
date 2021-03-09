@@ -75,6 +75,7 @@ if status --is-interactive
     abbr -a gba     'git branch --verbose --all'
     abbr -a gl      'git lol'
     abbr -a gclean  'git checkout master; git pull; git branch --merged | grep -v "master" | grep -v \'^*\' | xargs git branch -d;'
+    abbr -a gt      'git commit --allow-empty -m "Trigger build"; git push'
 
     # Dotfile manager (git bare)
     abbr -a d       'dotfiles'
