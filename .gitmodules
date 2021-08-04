@@ -3,7 +3,7 @@
 	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
+	url = https://github.com/tmux-plugins/tpm
 [submodule "tpm"]
 	path = tpm
 	url = /Users/semptic/.tmux/plugins/tpm/
