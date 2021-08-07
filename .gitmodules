@@ -7,3 +7,6 @@
 [submodule "tpm"]
 	path = tpm
 	url = /Users/semptic/.tmux/plugins/tpm/
+[submodule ".config/fish/omf"]
+	path = .config/fish/omf
+	url = /Users/semptic/.local/share/omf/
