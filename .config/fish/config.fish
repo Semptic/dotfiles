@@ -2,6 +2,7 @@
 if type -q thefuck
     thefuck --alias | source
 end
+
 # Enable vi mode
 fish_vi_key_bindings
 
@@ -12,8 +13,11 @@ function fish_title
     true
 end
 
-# Add rust bins to path
-set -Up fish_user_paths ~/.cargo/bin
+# Add to path
+set -U fish_user_paths ~/.cargo/bin ~/.jenv/bin /usr/local/opt/grep/libexec/gnubin ~/.local/bin ~/.pyenv/bin /usr/local/sbin 
+
+# Enable jenv
+status --is-interactive; and source (jenv init -|psub)
 
 # Setup bobthefish theme
 set -g theme_display_vi yes
@@ -31,11 +35,6 @@ set -g theme_display_user no
 
 # Set default editor
 set -x EDITOR 'vim -f'
-
-# Set local bin paths
-set fish_user_paths /usr/local/opt/grep/libexec/gnubin $fish_user_paths
-set fish_user_paths $fish_user_paths $HOME/.local/bin
-set fish_user_paths $fish_user_paths $HOME/.pyenv/bin
 
 # Setup fzf
 set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
@@ -129,5 +128,3 @@ else
         start_agent
     end  
 end
-
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
