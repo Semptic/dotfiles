@@ -24,9 +24,15 @@ dotfiles submodule update --init --recursive
 ```
 dotfiles config --local status.showUntrackedFiles no
 ```
-6) Install vim plugins: Open vim and run `:PluginInstall`
+6) Install fish plugins
+```fish
+fundle install
+```
 
-7) Install tmux plugins: Press `prefix` + <kbd>I</kbd> (capital i, as in **I**nstall) to fetch the plugin.
+7) Install vim plugins: Open vim and run `:PluginInstall`
+
+8) Install tmux plugins: Press `prefix` + <kbd>I</kbd> (capital i, as in **I**nstall) to fetch the plugin.
+
 
 ## Software
 
@@ -37,6 +43,7 @@ dotfiles config --local status.showUntrackedFiles no
 * fish
 * oh-my-fish
 * Fira Code Nerd Font
+* DejaVu Mono Sans Font
 * Network Manager
 * Network Manager Applet
 * gnome keyring (See [PAM](https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method) to unlock on login)
