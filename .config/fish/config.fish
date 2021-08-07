@@ -17,7 +17,9 @@ end
 set -U fish_user_paths ~/.cargo/bin ~/.jenv/bin /usr/local/opt/grep/libexec/gnubin ~/.local/bin ~/.pyenv/bin /usr/local/sbin 
 
 # Enable jenv
-status --is-interactive; and source (jenv init -|psub)
+if test -d ~/.jenv/;
+  status --is-interactive; and source (jenv init -|psub)
+end
 
 # Setup bobthefish theme
 set -g theme_display_vi yes
