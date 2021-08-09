@@ -29,12 +29,15 @@
     lg = !"git lg1"
 	hist = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
-[includeIf "gitdir:/Users"]
+[includeIf "gitdir:/Users/"]
         path = ~/.gitconfig-macos
-[includeIf "gitdir:C:"]
+[includeIf "gitdir:C:/"]
         path = ~/.gitconfig-windows
-[includeIf "gitdir:/home"]
+[includeIf "gitdir:/home/"]
         path = ~/.gitconfig-linux
 
-[includeIf "gitdir:~/Projects/work/**"]
+[includeIf "gitdir:~/Projects/work/"]
     path = ~/Projects/work/.gitconfig
+
+[includeIf "gitdir:~/Projects/private/"]
+    path = ~/Projects/private/.gitconfig
