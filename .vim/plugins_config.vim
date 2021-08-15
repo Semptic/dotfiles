@@ -25,6 +25,8 @@ if isdirectory($HOME."/.vim/bundle/vim-airline") && isdirectory($HOME."/.vim/bun
     " let g:gruvbox_italic=1
     let g:gruvbox_contrast_light = 'hard'
     let g:gruvbox_contrast_dark = 'hard'
+
+    colorscheme gruvbox
 endif
 
 

@@ -102,8 +102,6 @@ syntax enable
 set t_Co=256
 set background=light
 
-colorscheme gruvbox
-
 "hi Normal ctermbg=NONE
 "hi NonText ctermbg=NONE
 hi LineNr ctermfg=NONE ctermbg=NONE
