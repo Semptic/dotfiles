@@ -8,3 +8,6 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
    eval $(cat $HOME/.ssh/environment)
 fi
 
+# Source bashrc too
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
