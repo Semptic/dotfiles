@@ -1,9 +1,0 @@
-<code_scheme name="Default" version="173">
-  <ScalaCodeStyleSettings>
-    <option name="SCALAFMT_REFORMAT_ON_FILES_SAVE" value="true" />
-    <option name="FORMATTER" value="1" />
-    <option name="TYPE_ANNOTATION_EXCLUDE_MEMBER_OF_ANONYMOUS_CLASS" value="true" />
-    <option name="TYPE_ANNOTATION_EXCLUDE_MEMBER_OF_PRIVATE_CLASS" value="true" />
-    <option name="TYPE_ANNOTATION_EXCLUDE_IN_TEST_SOURCES" value="true" />
-  </ScalaCodeStyleSettings>
-</code_scheme>
