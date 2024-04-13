@@ -5,6 +5,9 @@ opacity = 0.8
 decorations = "None"
 startup_mode = "Fullscreen"
 
+[colors]
+transparent_background_colors = true
+
 # rose-pine from https://github.com/rose-pine/alacritty
 [colors.primary]
 foreground = "#e0def4"
