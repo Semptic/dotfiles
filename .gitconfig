@@ -1,20 +1,20 @@
 [user]
     email = semptic@kuhn.cloud
-	name = Stefan Kuhn
+  	name = Stefan Kuhn
 
 [core]
-	excludesfile = ~/.gitignore_global
-	editor = vim
+	  excludesfile = ~/.gitignore_global
 
 [rebase]
     autostash = true
 
 [push]
     default = simple
+  	autoSetupRemote = true
 
 [pull]
-	merge = true
-	rebase = false
+  	merge = true
+  	rebase = false
 
 [fetch]
     prune = true
@@ -27,17 +27,9 @@
     lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
     lg = !"git lg1"
-	hist = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	  hist = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
 [includeIf "gitdir:/Users/"]
-        path = ~/.gitconfig-macos
-[includeIf "gitdir:C:/"]
-        path = ~/.gitconfig-windows
+    path = ~/.gitconfig-macos
 [includeIf "gitdir:/home/"]
-        path = ~/.gitconfig-linux
-
-[includeIf "gitdir:~/Projects/work/"]
-    path = ~/Projects/work/.gitconfig
-
-[includeIf "gitdir:~/Projects/private/"]
-    path = ~/Projects/private/.gitconfig
+    path = ~/.gitconfig-linux
