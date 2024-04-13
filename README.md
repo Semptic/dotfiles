@@ -24,8 +24,9 @@ dotfiles submodule update --init --recursive
 ```
 dotfiles config --local status.showUntrackedFiles no
 ```
+6) Install [fihser](https://github.com/jorgebucaran/fisher) and then [tide](https://github.com/IlanCosman/tide)
 
-6) Install tmux plugins: Press `prefix` + <kbd>I</kbd> (capital i, as in **I**nstall) to fetch the plugin.
+7) Install tmux plugins: Press `prefix` + <kbd>I</kbd> (capital i, as in **I**nstall) to fetch the plugin.
 
 
 ## Software
