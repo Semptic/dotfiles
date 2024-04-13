@@ -24,36 +24,19 @@ dotfiles submodule update --init --recursive
 ```
 dotfiles config --local status.showUntrackedFiles no
 ```
-6) Install fish plugins
-```fish
-fundle install
-```
+6) Install [fihser](https://github.com/jorgebucaran/fisher) and then [tide](https://github.com/IlanCosman/tide)
 
-7) Install vim plugins: Open vim and run `:PluginInstall`
-
-8) Install tmux plugins: Press `prefix` + <kbd>I</kbd> (capital i, as in **I**nstall) to fetch the plugin.
+7) Install tmux plugins: Press `prefix` + <kbd>I</kbd> (capital i, as in **I**nstall) to fetch the plugin.
 
 
 ## Software
 
-* i3wm
-* polybar
 * alacritty
 * tmux
 * fish
-* oh-my-fish
 * Fira Code Nerd Font
-* DejaVu Mono Sans Font
-* Network Manager
-* Network Manager Applet
-* gnome keyring (See [PAM](https://wiki.archlinux.org/index.php/GNOME/Keyring#PAM_method) to unlock on login)
-* vim (neovim)
-* pavucontrol
-* i3-gnome
-
-## i3-gnome
-
-To make it work properly you need also to disable the desktop with `gsettings set org.gnome.gnome-flashback desktop false`
+* Meslo Nerd Font patched for Powerlevel10k
+* neovim
 
 ## Misc
 
