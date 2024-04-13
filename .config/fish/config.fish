@@ -14,29 +14,10 @@ function fish_title
 end
 
 # Add to path
-set -U fish_user_paths ~/.cargo/bin ~/.jenv/bin /usr/local/opt/grep/libexec/gnubin ~/.local/bin ~/.pyenv/bin /usr/local/sbin 
-
-# Enable jenv
-if test -d ~/.jenv/;
-  status --is-interactive; and source (jenv init -|psub)
-end
-
-# Setup bobthefish theme
-set -g theme_display_vi yes
-set -g theme_display_cmd_duration no
-set -g theme_display_date no
-set -g theme_display_git yes
-
-set -g theme_color_scheme gruvbox
-
-set -g theme_powerline_fonts no
-set -g theme_nerd_fonts yes
-
-set -g theme_display_hostname no
-set -g theme_display_user no
+set -U fish_user_paths ~/.cargo/bin ~/.local/bin
 
 # Set default editor
-set -x EDITOR 'vim -f'
+set -x EDITOR 'nvim'
 
 # Setup fzf
 set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
